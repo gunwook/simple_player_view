@@ -1,5 +1,4 @@
-# Simple_player_view is a library of videos and music.
-
+# Simple_player_view is a simple video and music player.
 
 ## 1. Download
 
