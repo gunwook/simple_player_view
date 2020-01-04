@@ -7,7 +7,7 @@ import com.gunwook.simplemediaplayer.model.MusicModel
 import com.gunwook.simplemediaplayer.model.VideoModel
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class SampleActivity : AppCompatActivity() {
 
     private var mDialog : MusicDialog? = null
     override fun onCreate(savedInstanceState: Bundle?) {
