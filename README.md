@@ -35,3 +35,7 @@
     val intent = Intent(this , VideoActivity::class.java)
     intent.putParcelableArrayListExtra("video_urls" , arrayListOf(VideoModel(thumbNail, videoUrl , title)))
     startActivity(intent)
+    
+## 3. Permission ?
+    <uses-permission android:name="android.permission.INTERNET" />
+
