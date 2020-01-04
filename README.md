@@ -1,7 +1,7 @@
 # Simple_player_view is a library of videos and music.
 
 
-## 1 Download
+## 1. Download
 
 ### Gradle
     repositories {
@@ -23,15 +23,15 @@
   
   
   
-# 1. How do I use simple_player_view?
-## 1.1. Dialog?
+## 2. How do I use simple_player_view?
+### 1.1. Dialog?
     MusicDialog(this, mutableListOf(MusicModel(mp3,mp3_title)),title).show()
     
-## 1.2. PopupWindow?
+### 1.2. PopupWindow?
     MusicPopUp.show(this ,  mutableListOf(MusicModel(mp3,mp3_title)))
     MusicPopUp.dismiss(this ,  mutableListOf(MusicModel(mp3,mp3_title)))
     
-## 1.3. Activity?
+### 1.3. Activity?
     val intent = Intent(this , VideoActivity::class.java)
     intent.putParcelableArrayListExtra("video_urls" , arrayListOf(VideoModel(thumbNail, videoUrl , title)))
     startActivity(intent)
