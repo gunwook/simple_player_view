@@ -1,13 +1,25 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'gunwook'
+    repoName = 'simple-media-player'
+    groupId = 'com.gunwook.simplemediaplayer'
+    artifactId = 'simple-media-player'
+    publishVersion = '0.0.1'
+    desc = 'simple-media-player'
+    issueTracker = "https://github.com/gunwook/simple_player_view/issues"
+    repository = "https://github.com/gunwook/simple_player_view.git"
+}
+
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId "com.gunwook.simplemediaplayer"
         minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
