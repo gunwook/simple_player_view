@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:id="@+id/containerView"
+                                                   android:background="@color/color_3A3C4D"
+                                                   android:paddingBottom="20dp"
+                                                   android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatSeekBar android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/seekbar"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toRightOf="parent"
+        />
+
+        <TextView android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvTime"
+                  android:textSize="14sp"
+                  tools:text="01:13 / 04:13"
+                  android:textColor="@color/white"
+                  android:gravity="center"
+                  android:layout_marginTop="15dp"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/seekbar"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                 android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  tools:text="Song Name"
+                  android:textSize="22sp"
+                  android:id="@+id/tvTitle"
+                 android:gravity="center"
+                  android:layout_marginTop="10dp"
+                  android:textColor="@color/white"
+                  app:layout_constraintTop_toBottomOf="@+id/tvTime"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+        />
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   android:id="@+id/ivControl"
+                   app:layout_constraintRight_toRightOf="parent"
+                   android:src="@drawable/exo_icon_pause"
+                   android:layout_marginTop="15dp"
+                                                      android:clickable="true"
+                                                      android:focusable="true"
+                   android:background="@drawable/music_select_control_bg"
+        />
+
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      app:layout_constraintRight_toRightOf="parent"
+                                                      app:layout_constraintRight_toLeftOf="@+id/ivPrev"
+                                                      android:src="@drawable/audio_minus"
+                                                      app:layout_constraintTop_toTopOf="@+id/ivControl"
+                                                      app:layout_constraintBottom_toBottomOf="@+id/ivControl"
+                                                      android:layout_marginEnd="20dp"
+                                                      android:id="@+id/ivMinus"
+                                                      android:clickable="true"
+                                                      android:focusable="true"
+                                                      android:background="@drawable/music_select_control_bg"
+        />
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      app:layout_constraintRight_toRightOf="parent"
+                                                      app:layout_constraintRight_toLeftOf="@+id/ivControl"
+                                                      android:src="@drawable/exo_icon_previous"
+                                                      android:id="@+id/ivPrev"
+                                                      android:clickable="true"
+                                                      android:focusable="true"
+                                                      app:layout_constraintTop_toTopOf="@+id/ivControl"
+                                                      app:layout_constraintBottom_toBottomOf="@+id/ivControl"
+                                                      android:layout_marginEnd="30dp"
+                                                      android:background="@drawable/music_select_control_bg"
+        />
+
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                                                      app:layout_constraintLeft_toRightOf="@+id/ivControl"
+                                                      android:src="@drawable/exo_icon_next"
+                                                      android:id="@+id/ivNext"
+                                                      android:clickable="true"
+                                                      android:focusable="true"
+                                                      app:layout_constraintTop_toTopOf="@+id/ivControl"
+                                                      app:layout_constraintBottom_toBottomOf="@+id/ivControl"
+                                                      android:layout_marginStart="30dp"
+                                                      android:background="@drawable/music_select_control_bg"
+        />
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      app:layout_constraintLeft_toRightOf="@+id/ivNext"
+                                                      android:src="@drawable/audio_plus"
+                                                      app:layout_constraintTop_toTopOf="@+id/ivControl"
+                                                      app:layout_constraintBottom_toBottomOf="@+id/ivControl"
+                                                      android:layout_marginStart="20dp"
+                                                      android:clickable="true"
+                                                      android:focusable="true"
+                                                      android:id="@+id/ivPlus"
+                                                      android:background="@drawable/music_select_control_bg"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
