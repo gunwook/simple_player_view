@@ -100,7 +100,7 @@ class VideoFragment : Fragment() , VideoCallback.View {
                 }
             }
 
-            Glide.with(this).load(listOfItems[0].thumb).into(view.ivThumbNail)
+            if (listOfItems[0].thumb.isNotEmpty()) Glide.with(this).load(listOfItems[0].thumb).into(view.ivThumbNail)
         }
 
 

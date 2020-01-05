@@ -37,3 +37,15 @@
 ## 3. Permission ?
     <uses-permission android:name="android.permission.INTERNET" />
 
+## 4. Requirements ?
+    minSdkVersion 17
+
+    compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+            enabled = true
+    }
+
