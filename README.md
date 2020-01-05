@@ -9,7 +9,7 @@
     }
 
     dependencies {
-      implementation 'com.gunwook.simplemediaplayer:simple-media-player:0.0.2'
+      implementation 'com.gunwook.simplemediaplayer:simple-media-player:0.0.4'
     }
 ### Maven
     <dependency>
