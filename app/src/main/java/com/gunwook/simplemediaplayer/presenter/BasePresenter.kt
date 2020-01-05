@@ -70,7 +70,10 @@ abstract class BasePresenter<out T : BaseModel>(val listOfItems : List<T>) : Bas
             }
 
             MusicStatus.PAUSE -> {
-                if (exoPlayer.getCurrentPosition() != 0L) {
+                val position = (exoPlayer.getCurrentPosition() / 1000).toInt()
+                val duration = (exoPlayer.getDuration() / 1000).toInt()
+
+                if (position != 0 && position != duration) {
                     exoPlayer.resume()
                 }else {
                     play()

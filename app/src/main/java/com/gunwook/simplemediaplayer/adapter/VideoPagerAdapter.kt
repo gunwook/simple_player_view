@@ -11,8 +11,16 @@ import com.gunwook.simplemediaplayer.model.VideoModel
 
 
 class VideoPagerAdapter(val list : List<VideoModel> , fm : FragmentManager ,val mainView : VideoMainCallback) : FragmentPagerAdapter(fm , BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+
+    var fragments : ArrayList<VideoFragment> = arrayListOf()
+    init {
+        list.forEach {
+            fragments.add(VideoFragment.newInstance(listOf(it) , mainView))
+        }
+    }
+
     override fun getItem(position: Int): Fragment {
-        return VideoFragment.newInstance(list.subList(position , position + 1) , mainView)
+        return fragments[position]
     }
 
     override fun getCount(): Int {

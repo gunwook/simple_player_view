@@ -37,7 +37,7 @@ class VideoFragment : Fragment() , VideoCallback.View {
     lateinit var mainCallback : VideoMainCallback
     lateinit var view : CellListVideoBinding
     var presenter : VideoPresenter? = null
-    private val compositeDisposable = CompositeDisposable()
+    val compositeDisposable = CompositeDisposable()
 
     companion object {
         fun newInstance(list : List<VideoModel> , mainView : VideoMainCallback) : VideoFragment {
@@ -138,6 +138,7 @@ class VideoFragment : Fragment() , VideoCallback.View {
             }
         }else if (status == Player.STATE_ENDED){
             compositeDisposable.clear()
+            presenter?.stateChange(BasePresenter.MusicStatus.PAUSE)
         }
     }
 

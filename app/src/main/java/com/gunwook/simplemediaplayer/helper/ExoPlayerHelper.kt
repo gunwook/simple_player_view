@@ -25,7 +25,6 @@ class ExoPlayerHelper : Player.EventListener {
         player = ExoPlayerFactory.newSimpleInstance(context)
 
         player?.addListener(this)
-
         return player
     }
 

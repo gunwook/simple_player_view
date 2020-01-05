@@ -6,9 +6,9 @@ import com.gunwook.simplemediaplayer.callback.VideoCallback
 import com.gunwook.simplemediaplayer.helper.ExoPlayerHelper
 import com.gunwook.simplemediaplayer.model.MusicModel
 import com.gunwook.simplemediaplayer.model.VideoModel
+import io.reactivex.disposables.CompositeDisposable
 
 class VideoPresenter(val mContext : Context, val view : VideoCallback.View , val list : List<VideoModel>) : VideoCallback.Presenter , BasePresenter<VideoModel>(list) {
-
     fun initalize() {
          exoPlayer.initializePlayer(mContext) {
             view.playerStatus(it)
