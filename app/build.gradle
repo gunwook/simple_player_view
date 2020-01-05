@@ -11,7 +11,7 @@ publish {
     repoName = 'simple-media-player'
     groupId = 'com.gunwook.simplemediaplayer'
     artifactId = 'simple-media-player'
-    publishVersion = '0.0.1'
+    publishVersion = '0.0.2'
     desc = 'simple-media-player'
     issueTracker = "https://github.com/gunwook/simple_player_view/issues"
     repository = "https://github.com/gunwook/simple_player_view.git"
