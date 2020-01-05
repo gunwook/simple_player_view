@@ -1,17 +1,15 @@
-# Simple_player_view is a library of videos and music.
-
+# Simple_player_view is a simple video and music player.
 
 ## 1. Download
 
 ### Gradle
     repositories {
-      mavenCentral()
       google()
+      jcenter()
     }
 
     dependencies {
-      implementation 'com.github.bumptech.glide:glide:4.10.0'
-      annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
+      implementation 'com.gunwook.simplemediaplayer:simple-media-player:0.0.2'
     }
 ### Maven
     <dependency>
@@ -35,3 +33,7 @@
     val intent = Intent(this , VideoActivity::class.java)
     intent.putParcelableArrayListExtra("video_urls" , arrayListOf(VideoModel(thumbNail, videoUrl , title)))
     startActivity(intent)
+    
+## 3. Permission ?
+    <uses-permission android:name="android.permission.INTERNET" />
+
