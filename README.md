@@ -15,7 +15,7 @@
     <dependency>
       <groupId>com.gunwook.simplemediaplayer</groupId>
       <artifactId>simple-media-player</artifactId>
-      <version>0.0.1</version>
+      <version>0.0.4</version>
       <type>pom</type>
     </dependency>
   
